@@ -2,9 +2,9 @@
 %define	version 0.0.0.1
 %define release %mkrel 1
 
-%define major 1
-%define libname %mklibname %{name} %major
-%define libnamedev %mklibname %{name} %major -d
+%define epoch 1
+%define libname %mklibname %{name} %epoch
+%define libnamedev %mklibname %{name} %epoch -d
 
 Summary: 	This is an application launcher and taskbar based on the good old engage.
 Name: 		%{name}
@@ -42,7 +42,14 @@ rm -rf $RPM_BUILD_ROOT
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%makeinstall
+%makeinstall_std
+
+# %lang(fr) /usr/share/locale/fr/LC_MESSAGES/ephoto.mo
+%find_lang %{name}
+for mo in `ls %buildroot%_datadir/locale/` ;
+do Y=`echo -n $mo | sed -e "s|/||"`;
+echo "%lang($Y) $(echo %_datadir/locale/${mo}/LC_MESSAGES/ng.mo)" >> $RPM_BUILD_DIR/%{name}-%{version}/%{name}.lang
+done
 
 %post -p /sbin/ldconfig
 
@@ -51,7 +58,9 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(-,root,root)
 %doc AUTHORS ChangeLog COPYING NEWS README TODO INSTALL
-/*
+%_datadir/locale/*
+%{_libdir}/enlightenment/modules/ng/*
+
