@@ -6,7 +6,7 @@
 %define libname %mklibname %{name} %epoch
 %define libnamedev %mklibname %{name} %epoch -d
 
-Summary: 	This is an application launcher and taskbar based on the good old engage.
+Summary: 	This is an application launcher and taskbar based on the good old engage
 Name: 		%{name}
 Version: 	%{version}
 Release: 	%{release}
