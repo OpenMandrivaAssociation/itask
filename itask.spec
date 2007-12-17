@@ -14,7 +14,6 @@ License: 	BSD
 Group: 		Toys
 URL:		http://code.google.com/p/itask-module/
 Source: 	%{name}-%{version}.tar.bz2
-BuildRoot: 	%{_tmppath}/%{name}-buildroot
 BuildRequires:	ecore-devel >= 0.9.9.038
 BuildRequires:  evas-devel >= 0.9.9.038, esmart-devel >= 0.9.0.008
 BuildRequires:  edje-devel >= 0.5.0.038
