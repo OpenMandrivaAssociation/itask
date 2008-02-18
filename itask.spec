@@ -1,6 +1,6 @@
 %define	name itask
 %define	version 0.0.0.1
-%define release %mkrel 1
+%define release %mkrel 2
 
 %define epoch 1
 %define libname %mklibname %{name} %epoch
