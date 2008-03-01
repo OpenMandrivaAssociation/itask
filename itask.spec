@@ -1,4 +1,4 @@
-%define	name itask-ng
+%define	name itask
 %define	version 0.0.0.1
 %define release %mkrel 3
 %define svn 20080301
@@ -14,7 +14,7 @@ Release: 	%{release}
 License: 	BSD
 Group: 		Toys
 URL:		http://code.google.com/p/itask-module/
-Source: 	%{name}-%{svn}.tar.bz2
+Source: 	%{name}-ng-%{svn}.tar.bz2
 BuildRoot: 	%{_tmppath}/%{name}-buildroot
 BuildRequires:	ecore-devel >= 0.9.9.042
 BuildRequires:  evas-devel >= 0.9.9.042, esmart-devel >= 0.9.0.008
@@ -33,7 +33,7 @@ zoom correctly.
 
 %prep
 rm -rf $RPM_BUILD_ROOT
-%setup -q -n %{name}-%{svn}
+%setup -q -n %{name}-ng-%{svn}
 
 %build
 ./autogen.sh
