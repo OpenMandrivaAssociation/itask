@@ -21,6 +21,7 @@ BuildRequires:  evas-devel >= 0.9.9.042, esmart-devel >= 0.9.0.008
 BuildRequires:  edje-devel >= 0.5.0.042
 BuildRequires:  eet-devel >= 0.9.10.042, %{mklibname e0}-devel >= 0.16.999.042
 BuildRequires:  edje >= 0.5.0.042, etk-devel >= 0.1.0.042
+Buildrequires:	gettext-devel
 requires:       e >= 0.16.999.042
 
 %description
