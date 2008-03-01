@@ -1,6 +1,7 @@
-%define	name itask
+%define	name itask-ng
 %define	version 0.0.0.1
-%define release %mkrel 2
+%define release %mkrel 3
+%define svn 20080301
 
 %define epoch 1
 %define libname %mklibname %{name} %epoch
@@ -13,15 +14,14 @@ Release: 	%{release}
 License: 	BSD
 Group: 		Toys
 URL:		http://code.google.com/p/itask-module/
-Source: 	%{name}-%{version}.tar.bz2
+Source: 	%{name}-%{svn}.tar.bz2
 BuildRoot: 	%{_tmppath}/%{name}-buildroot
-BuildRequires:	ecore-devel >= 0.9.9.038
-BuildRequires:  evas-devel >= 0.9.9.038, esmart-devel >= 0.9.0.008
-BuildRequires:  edje-devel >= 0.5.0.038
-BuildRequires:  eet-devel >= 0.9.10.038, %{mklibname e0}-devel >= 0.16.999.038
-BuildRequires:  edje >= 0.5.0.038, etk-devel >= 0.1.0.003
-requires:       e >= 0.16.999.038
-
+BuildRequires:	ecore-devel >= 0.9.9.042
+BuildRequires:  evas-devel >= 0.9.9.042, esmart-devel >= 0.9.0.008
+BuildRequires:  edje-devel >= 0.5.0.042
+BuildRequires:  eet-devel >= 0.9.10.042, %{mklibname e0}-devel >= 0.16.999.042
+BuildRequires:  edje >= 0.5.0.042, etk-devel >= 0.1.0.042
+requires:       e >= 0.16.999.042
 
 %description
 this is an application launcher and taskbar based on the good old 
@@ -33,7 +33,7 @@ zoom correctly.
 
 %prep
 rm -rf $RPM_BUILD_ROOT
-%setup -q
+%setup -q -n %{name}-%{svn}
 
 %build
 ./autogen.sh
@@ -61,6 +61,5 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(-,root,root)
 %doc AUTHORS ChangeLog COPYING NEWS README TODO INSTALL
-%_datadir/locale/*
-%{_libdir}/enlightenment/modules/ng/*
-
+#%_datadir/locale/*
+%{_libdir}/enlightenment/modules/itask-ng/*
