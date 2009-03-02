@@ -20,7 +20,7 @@ BuildRequires:	ecore-devel >= 0.9.9.050
 BuildRequires:  evas-devel >= 0.9.9.050, esmart-devel >= 0.9.0.008
 BuildRequires:  edje-devel >= 0.9.9.050
 Buildrequires:  efreet-devel >= 0.5.0.50
-BuildRequires:  eet-devel >= 1.1.0, %{mklibname e0}-devel >= 0.16.999.050
+BuildRequires:  eet-devel >= 1.1.0, e-devel >= 0.16.999.050
 BuildRequires:  edje >= 0.9.9.050, etk-devel >= 0.1.0.042
 Buildrequires:	gettext-devel
 requires:       e >= 0.16.999.050
