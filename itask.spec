@@ -1,7 +1,7 @@
 %define	name itask
 %define	version 0.0.0.1
-%define release %mkrel 5
-%define svn 20080301
+%define release %mkrel 6
+%define svn 20090302
 
 %define epoch 1
 %define libname %mklibname %{name} %epoch
@@ -16,14 +16,14 @@ Group: 		Toys
 URL:		http://code.google.com/p/itask-module/
 Source: 	%{name}-ng-%{svn}.tar.bz2
 BuildRoot: 	%{_tmppath}/%{name}-buildroot
-BuildRequires:	ecore-devel >= 0.9.9.042
-BuildRequires:  evas-devel >= 0.9.9.042, esmart-devel >= 0.9.0.008
-BuildRequires:  edje-devel >= 0.5.0.042
-Buildrequires:  efreet-devel >= 0.0.3.042
-BuildRequires:  eet-devel >= 0.9.10.042, %{mklibname e0}-devel >= 0.16.999.042
-BuildRequires:  edje >= 0.5.0.042, etk-devel >= 0.1.0.042
+BuildRequires:	ecore-devel >= 0.9.9.050
+BuildRequires:  evas-devel >= 0.9.9.050, esmart-devel >= 0.9.0.008
+BuildRequires:  edje-devel >= 0.9.9.050
+Buildrequires:  efreet-devel >= 0.5.0.50
+BuildRequires:  eet-devel >= 1.1.0, %{mklibname e0}-devel >= 0.16.999.050
+BuildRequires:  edje >= 0.9.9.050, etk-devel >= 0.1.0.042
 Buildrequires:	gettext-devel
-requires:       e >= 0.16.999.042
+requires:       e >= 0.16.999.050
 
 %description
 this is an application launcher and taskbar based on the good old 
