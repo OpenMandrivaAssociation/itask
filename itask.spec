@@ -1,6 +1,6 @@
 %define	name itask
 %define	version 0.0.0.1
-%define release %mkrel 6
+%define release %mkrel 7
 %define svn 20090302
 
 %define epoch 1
