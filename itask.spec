@@ -22,7 +22,7 @@ BuildRequires:  edje-devel >= 0.9.9.050
 Buildrequires:  efreet-devel >= 0.5.0.50
 BuildRequires:  eet-devel >= 1.1.0, e-devel >= 0.16.999.050
 BuildRequires:  edje >= 0.9.9.050, etk-devel >= 0.1.0.042
-Buildrequires:	gettext-devel
+Buildrequires:	gettext-devel cares-devel
 requires:       e >= 0.16.999.050
 
 %description
