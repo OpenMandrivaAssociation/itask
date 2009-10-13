@@ -1,5 +1,5 @@
 %define	name itask
-%define	version 0.0.0.1
+%define	version 0.0.0.2
 %define release %mkrel 1
 %define svn 20091011
 
