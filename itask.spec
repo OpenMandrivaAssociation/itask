@@ -50,7 +50,7 @@ rm -rf $RPM_BUILD_ROOT
 %find_lang %{name}
 for mo in `ls %buildroot%_datadir/locale/` ;
 do Y=`echo -n $mo | sed -e "s|/||"`;
-echo "%lang($Y) $(echo %_datadir/locale/${mo}/LC_MESSAGES/ng.mo)" >> $RPM_BUILD_DIR/%{name}-%{version}/%{name}.lang
+echo "%lang($Y) $(echo %_datadir/locale/${mo}/LC_MESSAGES/ng.mo)" >> %{_builddir}/%{name}-%{version}/%{name}.lang
 done
 
 %if %mdkversion < 200900
