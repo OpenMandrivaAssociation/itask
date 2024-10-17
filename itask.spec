@@ -13,7 +13,7 @@ Version: 	%{version}
 Release: 	%{release}
 License: 	BSD
 Group: 		Toys
-URL:		http://code.google.com/p/itask-module/
+URL:		https://code.google.com/p/itask-module/
 Source: 	%{name}-ng-%{svn}.tar.bz2
 BuildRoot: 	%{_tmppath}/%{name}-buildroot
 BuildRequires:	ecore-devel >= 0.9.9.050
