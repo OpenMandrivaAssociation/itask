@@ -16,6 +16,11 @@ Group: 		Toys
 URL:		https://code.google.com/p/itask-module/
 Source: 	%{name}-ng-%{svn}.tar.bz2
 BuildRoot: 	%{_tmppath}/%{name}-buildroot
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	ecore-devel >= 0.9.9.050
 BuildRequires:  evas-devel >= 0.9.9.050, esmart-devel >= 0.9.0.008
 BuildRequires:  edje-devel >= 0.9.9.050
